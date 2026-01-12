@@ -1,37 +1,52 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.2'
+ruby '3.1.2'
 
-gem 'rails', '=6.0.0.beta3'
+gem 'rails', '~> 7.1.5'
 
+# Database
+gem 'pg', '~> 1.5'
 
-gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 3.11'
-gem 'sass-rails', '~> 5'
-gem 'webpacker', '~> 4.0'
+# Server
+gem 'puma', '~> 6.4'
+
+# Assets
+gem 'sass-rails', '~> 6.0'
+gem 'webpacker', '~> 5.4'
 gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
+gem 'jbuilder', '~> 2.11'
 
-gem 'bootsnap', '>= 1.4.2', require: false
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.4.4', require: false
 
-gem 'bulma-rails', '~> 0.7.4'
+# UI Framework
+gem 'bulma-rails', '~> 0.9.4'
 gem 'bulma-extensions-rails', '~> 1.0.30'
-gem 'devise', '=4.6.1'
 
-gem 'omniauth', '= 1.9.0'
-gem 'omniauth-facebook', '= 5.0.0'
-gem 'faker', '=1.9.3'
-gem 'kaminari'
+# Authentication
+gem 'devise', '~> 4.9'
+gem 'omniauth', '~> 2.1'
+gem 'omniauth-facebook', '~> 9.0'
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
-gem 'stripe', '=4.18.1'
-gem "figaro"
-gem 'trestle', '~> 0.8.12'
-gem 'trestle-auth', '=0.2.5'
-gem 'trestle-search', '=0.3.0'
-gem 'trestle-tinymce', '=0.1.3'
-gem 'activemerchant', '=1.95.0'
-gem "aws-sdk-s3", require: false
+# Utilities
+gem 'faker', '~> 3.2'
+gem 'kaminari', '~> 1.2'
+
+# Payment Integration
+gem 'stripe', '~> 12.0'
+gem 'figaro', '~> 1.2'
+gem 'activemerchant', '~> 1.137'
+
+# Admin Backend
+gem 'trestle', '~> 0.9'
+gem 'trestle-auth', '~> 0.4'
+gem 'trestle-search', '~> 0.4'
+gem 'trestle-tinymce', '~> 0.2'
+
+# AWS Storage
+gem 'aws-sdk-s3', '~> 1.143', require: false
 
 
 
